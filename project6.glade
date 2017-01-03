@@ -1,0 +1,2550 @@
+<?xml version="1.0"?>
+<GTK-Interface>
+
+<project>
+  <name>Project6</name>
+  <program_name>project6</program_name>
+  <directory></directory>
+  <source_directory>src</source_directory>
+  <pixmaps_directory>pixmaps</pixmaps_directory>
+  <language>C</language>
+  <gnome_support>False</gnome_support>
+  <gettext_support>False</gettext_support>
+</project>
+
+<widget>
+  <class>GtkWindow</class>
+  <name>win_ini</name>
+  <x>0</x>
+  <y>0</y>
+  <signal>
+    <name>delete_event</name>
+    <handler>on_win_ini_delete_event</handler>
+    <last_modification_time>Mon, 16 Jun 2003 11:19:59 GMT</last_modification_time>
+  </signal>
+  <title>           </title>
+  <type>GTK_WINDOW_TOPLEVEL</type>
+  <position>GTK_WIN_POS_NONE</position>
+  <modal>False</modal>
+  <allow_shrink>True</allow_shrink>
+  <allow_grow>True</allow_grow>
+  <auto_shrink>False</auto_shrink>
+
+  <widget>
+    <class>GtkTable</class>
+    <name>table1</name>
+    <rows>2</rows>
+    <columns>1</columns>
+    <homogeneous>False</homogeneous>
+    <row_spacing>0</row_spacing>
+    <column_spacing>0</column_spacing>
+
+    <widget>
+      <class>GtkMenuBar</class>
+      <name>menubar1</name>
+      <shadow_type>GTK_SHADOW_OUT</shadow_type>
+      <child>
+	<left_attach>0</left_attach>
+	<right_attach>1</right_attach>
+	<top_attach>0</top_attach>
+	<bottom_attach>1</bottom_attach>
+	<xpad>0</xpad>
+	<ypad>0</ypad>
+	<xexpand>False</xexpand>
+	<yexpand>False</yexpand>
+	<xshrink>False</xshrink>
+	<yshrink>False</yshrink>
+	<xfill>True</xfill>
+	<yfill>False</yfill>
+      </child>
+
+      <widget>
+	<class>GtkMenuItem</class>
+	<name>archivo1</name>
+	<signal>
+	  <name>activate</name>
+	  <handler>on_archivo1_activate</handler>
+	  <last_modification_time>Wed, 28 May 2003 17:11:09 GMT</last_modification_time>
+	</signal>
+	<label>Archivo</label>
+	<right_justify>False</right_justify>
+
+	<widget>
+	  <class>GtkMenu</class>
+	  <name>archivo1_menu</name>
+
+	  <widget>
+	    <class>GtkMenuItem</class>
+	    <name>nuevo1</name>
+	    <accelerator>
+	      <modifiers>GDK_CONTROL_MASK</modifiers>
+	      <key>GDK_N</key>
+	      <signal>activate</signal>
+	    </accelerator>
+	    <signal>
+	      <name>activate</name>
+	      <handler>on_nuevo1_activate</handler>
+	      <last_modification_time>Sat, 14 Jun 2003 04:49:29 GMT</last_modification_time>
+	    </signal>
+	    <label>Nuevo</label>
+	    <right_justify>False</right_justify>
+	  </widget>
+
+	  <widget>
+	    <class>GtkMenuItem</class>
+	    <name>separator2</name>
+	    <right_justify>False</right_justify>
+	  </widget>
+
+	  <widget>
+	    <class>GtkMenuItem</class>
+	    <name>abrir</name>
+	    <accelerator>
+	      <modifiers>GDK_CONTROL_MASK</modifiers>
+	      <key>GDK_A</key>
+	      <signal>activate</signal>
+	    </accelerator>
+	    <signal>
+	      <name>activate</name>
+	      <handler>on_abrir_activate</handler>
+	      <last_modification_time>Thu, 12 Jun 2003 12:03:37 GMT</last_modification_time>
+	    </signal>
+	    <label>Abrir sesion</label>
+	    <right_justify>False</right_justify>
+	  </widget>
+
+	  <widget>
+	    <class>GtkMenuItem</class>
+	    <name>guardar</name>
+	    <accelerator>
+	      <modifiers>GDK_CONTROL_MASK</modifiers>
+	      <key>GDK_G</key>
+	      <signal>activate</signal>
+	    </accelerator>
+	    <signal>
+	      <name>activate</name>
+	      <handler>on_guardar_activate</handler>
+	      <last_modification_time>Thu, 12 Jun 2003 12:03:37 GMT</last_modification_time>
+	    </signal>
+	    <label>Guardar sesion</label>
+	    <right_justify>False</right_justify>
+	  </widget>
+
+	  <widget>
+	    <class>GtkMenuItem</class>
+	    <name>separator1</name>
+	    <right_justify>False</right_justify>
+	  </widget>
+
+	  <widget>
+	    <class>GtkMenuItem</class>
+	    <name>salir</name>
+	    <accelerator>
+	      <modifiers>GDK_CONTROL_MASK</modifiers>
+	      <key>GDK_X</key>
+	      <signal>activate</signal>
+	    </accelerator>
+	    <signal>
+	      <name>activate</name>
+	      <handler>on_salir_activate</handler>
+	      <last_modification_time>Thu, 12 Jun 2003 12:02:43 GMT</last_modification_time>
+	    </signal>
+	    <label>Salir</label>
+	    <right_justify>False</right_justify>
+	  </widget>
+	</widget>
+      </widget>
+
+      <widget>
+	<class>GtkMenuItem</class>
+	<name>edit1</name>
+	<signal>
+	  <name>activate</name>
+	  <handler>on_edit1_activate</handler>
+	  <last_modification_time>Mon, 16 Jun 2003 05:42:06 GMT</last_modification_time>
+	</signal>
+	<label>Trama</label>
+	<right_justify>False</right_justify>
+
+	<widget>
+	  <class>GtkMenu</class>
+	  <name>edit1_menu</name>
+
+	  <widget>
+	    <class>GtkMenuItem</class>
+	    <name>eliminar_paquete1</name>
+	    <accelerator>
+	      <modifiers>GDK_CONTROL_MASK</modifiers>
+	      <key>GDK_E</key>
+	      <signal>activate</signal>
+	    </accelerator>
+	    <signal>
+	      <name>activate</name>
+	      <handler>on_eliminar_paquete1_activate</handler>
+	      <last_modification_time>Mon, 16 Jun 2003 13:17:36 GMT</last_modification_time>
+	    </signal>
+	    <label>Eliminar trama</label>
+	    <right_justify>False</right_justify>
+	  </widget>
+
+	  <widget>
+	    <class>GtkMenuItem</class>
+	    <name>eliminar_todos_paquetes1</name>
+	    <accelerator>
+	      <modifiers>GDK_CONTROL_MASK</modifiers>
+	      <key>GDK_T</key>
+	      <signal>activate</signal>
+	    </accelerator>
+	    <signal>
+	      <name>activate</name>
+	      <handler>on_eliminar_todos_paquetes1_activate</handler>
+	      <last_modification_time>Thu, 19 Jun 2003 12:46:28 GMT</last_modification_time>
+	    </signal>
+	    <label>Eliminar todas las tramas</label>
+	    <right_justify>False</right_justify>
+	  </widget>
+
+	  <widget>
+	    <class>GtkMenuItem</class>
+	    <name>eliminar_tramas_por_filtro1</name>
+	    <accelerator>
+	      <modifiers>GDK_CONTROL_MASK</modifiers>
+	      <key>GDK_F</key>
+	      <signal>activate</signal>
+	    </accelerator>
+	    <signal>
+	      <name>activate</name>
+	      <handler>on_eliminar_tramas_por_filtro1_activate</handler>
+	      <last_modification_time>Thu, 26 Jun 2003 10:15:41 GMT</last_modification_time>
+	    </signal>
+	    <label>Eliminar tramas por filtro</label>
+	    <right_justify>False</right_justify>
+	  </widget>
+
+	  <widget>
+	    <class>GtkMenuItem</class>
+	    <name>separator3</name>
+	    <right_justify>False</right_justify>
+	  </widget>
+
+	  <widget>
+	    <class>GtkMenuItem</class>
+	    <name>ir_a_trama1</name>
+	    <accelerator>
+	      <modifiers>GDK_CONTROL_MASK</modifiers>
+	      <key>GDK_I</key>
+	      <signal>activate</signal>
+	    </accelerator>
+	    <signal>
+	      <name>activate</name>
+	      <handler>on_ir_a_trama1_activate</handler>
+	      <last_modification_time>Thu, 19 Jun 2003 14:10:34 GMT</last_modification_time>
+	    </signal>
+	    <label>Ir a trama</label>
+	    <right_justify>False</right_justify>
+	  </widget>
+
+	  <widget>
+	    <class>GtkMenuItem</class>
+	    <name>buscar_trama1</name>
+	    <accelerator>
+	      <modifiers>GDK_CONTROL_MASK</modifiers>
+	      <key>GDK_B</key>
+	      <signal>activate</signal>
+	    </accelerator>
+	    <signal>
+	      <name>activate</name>
+	      <handler>on_buscar_trama1_activate</handler>
+	      <last_modification_time>Thu, 19 Jun 2003 14:35:22 GMT</last_modification_time>
+	    </signal>
+	    <label>Buscar trama</label>
+	    <right_justify>False</right_justify>
+	  </widget>
+
+	  <widget>
+	    <class>GtkMenuItem</class>
+	    <name>buscar_siguiente_trama1</name>
+	    <accelerator>
+	      <modifiers>GDK_CONTROL_MASK</modifiers>
+	      <key>GDK_S</key>
+	      <signal>activate</signal>
+	    </accelerator>
+	    <signal>
+	      <name>activate</name>
+	      <handler>on_buscar_siguiente_trama1_activate</handler>
+	      <last_modification_time>Thu, 19 Jun 2003 15:51:52 GMT</last_modification_time>
+	    </signal>
+	    <label>Buscar siguiente trama</label>
+	    <right_justify>False</right_justify>
+	  </widget>
+	</widget>
+      </widget>
+
+      <widget>
+	<class>GtkMenuItem</class>
+	<name>capturar1</name>
+	<label>Capturar</label>
+	<right_justify>False</right_justify>
+
+	<widget>
+	  <class>GtkMenu</class>
+	  <name>capturar1_menu</name>
+
+	  <widget>
+	    <class>GtkMenuItem</class>
+	    <name>empezar1</name>
+	    <accelerator>
+	      <modifiers>GDK_CONTROL_MASK</modifiers>
+	      <key>GDK_C</key>
+	      <signal>activate</signal>
+	    </accelerator>
+	    <signal>
+	      <name>activate</name>
+	      <handler>on_empezar1_activate</handler>
+	      <last_modification_time>Mon, 16 Jun 2003 05:42:06 GMT</last_modification_time>
+	    </signal>
+	    <label>Empezar</label>
+	    <right_justify>False</right_justify>
+	  </widget>
+
+	  <widget>
+	    <class>GtkMenuItem</class>
+	    <name>opciones_avanzadas1</name>
+	    <accelerator>
+	      <modifiers>GDK_CONTROL_MASK</modifiers>
+	      <key>GDK_O</key>
+	      <signal>activate</signal>
+	    </accelerator>
+	    <signal>
+	      <name>activate</name>
+	      <handler>on_opciones_avanzadas1_activate</handler>
+	      <last_modification_time>Mon, 16 Jun 2003 05:42:06 GMT</last_modification_time>
+	    </signal>
+	    <label>Opciones avanzadas</label>
+	    <right_justify>False</right_justify>
+	  </widget>
+	</widget>
+      </widget>
+
+      <widget>
+	<class>GtkMenuItem</class>
+	<name>ayuda1</name>
+	<label>Ayuda</label>
+	<right_justify>False</right_justify>
+
+	<widget>
+	  <class>GtkMenu</class>
+	  <name>ayuda1_menu</name>
+
+	  <widget>
+	    <class>GtkMenuItem</class>
+	    <name>acerca_de1</name>
+	    <signal>
+	      <name>activate</name>
+	      <handler>on_acerca_de1_activate</handler>
+	      <last_modification_time>Thu, 19 Jun 2003 03:22:56 GMT</last_modification_time>
+	    </signal>
+	    <label>Acerca de...</label>
+	    <right_justify>False</right_justify>
+	  </widget>
+	</widget>
+      </widget>
+    </widget>
+
+    <widget>
+      <class>GtkNotebook</class>
+      <name>notebook</name>
+      <can_focus>True</can_focus>
+      <signal>
+	<name>switch_page</name>
+	<handler>on_notebook_switch_page</handler>
+	<last_modification_time>Thu, 19 Jun 2003 03:49:48 GMT</last_modification_time>
+      </signal>
+      <show_tabs>True</show_tabs>
+      <show_border>True</show_border>
+      <tab_pos>GTK_POS_TOP</tab_pos>
+      <scrollable>True</scrollable>
+      <tab_hborder>2</tab_hborder>
+      <tab_vborder>2</tab_vborder>
+      <popup_enable>False</popup_enable>
+      <child>
+	<left_attach>0</left_attach>
+	<right_attach>1</right_attach>
+	<top_attach>1</top_attach>
+	<bottom_attach>2</bottom_attach>
+	<xpad>0</xpad>
+	<ypad>0</ypad>
+	<xexpand>True</xexpand>
+	<yexpand>True</yexpand>
+	<xshrink>False</xshrink>
+	<yshrink>False</yshrink>
+	<xfill>True</xfill>
+	<yfill>True</yfill>
+      </child>
+
+      <widget>
+	<class>GtkTable</class>
+	<name>table2</name>
+	<border_width>1</border_width>
+	<rows>24</rows>
+	<columns>1</columns>
+	<homogeneous>False</homogeneous>
+	<row_spacing>0</row_spacing>
+	<column_spacing>0</column_spacing>
+
+	<widget>
+	  <class>GtkVPaned</class>
+	  <name>vpaned1</name>
+	  <handle_size>10</handle_size>
+	  <gutter_size>6</gutter_size>
+	  <position>257</position>
+	  <child>
+	    <left_attach>0</left_attach>
+	    <right_attach>1</right_attach>
+	    <top_attach>0</top_attach>
+	    <bottom_attach>24</bottom_attach>
+	    <xpad>0</xpad>
+	    <ypad>0</ypad>
+	    <xexpand>True</xexpand>
+	    <yexpand>True</yexpand>
+	    <xshrink>False</xshrink>
+	    <yshrink>False</yshrink>
+	    <xfill>True</xfill>
+	    <yfill>True</yfill>
+	  </child>
+
+	  <widget>
+	    <class>GtkScrolledWindow</class>
+	    <name>scrolledwindow1</name>
+	    <hscrollbar_policy>GTK_POLICY_ALWAYS</hscrollbar_policy>
+	    <vscrollbar_policy>GTK_POLICY_ALWAYS</vscrollbar_policy>
+	    <hupdate_policy>GTK_UPDATE_CONTINUOUS</hupdate_policy>
+	    <vupdate_policy>GTK_UPDATE_CONTINUOUS</vupdate_policy>
+	    <child>
+	      <shrink>True</shrink>
+	      <resize>False</resize>
+	    </child>
+
+	    <widget>
+	      <class>GtkCList</class>
+	      <name>clist1</name>
+	      <can_focus>True</can_focus>
+	      <signal>
+		<name>select_row</name>
+		<handler>on_clist1_select_row</handler>
+		<last_modification_time>Mon, 02 Jun 2003 17:39:10 GMT</last_modification_time>
+	      </signal>
+	      <columns>4</columns>
+	      <column_widths>39,141,168,80</column_widths>
+	      <selection_mode>GTK_SELECTION_SINGLE</selection_mode>
+	      <show_titles>True</show_titles>
+	      <shadow_type>GTK_SHADOW_IN</shadow_type>
+
+	      <widget>
+		<class>GtkLabel</class>
+		<child_name>CList:title</child_name>
+		<name>label4</name>
+		<label>ID</label>
+		<justify>GTK_JUSTIFY_CENTER</justify>
+		<wrap>False</wrap>
+		<xalign>0.5</xalign>
+		<yalign>0.5</yalign>
+		<xpad>0</xpad>
+		<ypad>0</ypad>
+	      </widget>
+
+	      <widget>
+		<class>GtkLabel</class>
+		<child_name>CList:title</child_name>
+		<name>label5</name>
+		<label>Direccion origen</label>
+		<justify>GTK_JUSTIFY_CENTER</justify>
+		<wrap>False</wrap>
+		<xalign>0.5</xalign>
+		<yalign>0.5</yalign>
+		<xpad>0</xpad>
+		<ypad>0</ypad>
+	      </widget>
+
+	      <widget>
+		<class>GtkLabel</class>
+		<child_name>CList:title</child_name>
+		<name>label6</name>
+		<label>Direccion destino</label>
+		<justify>GTK_JUSTIFY_CENTER</justify>
+		<wrap>False</wrap>
+		<xalign>0.5</xalign>
+		<yalign>0.5</yalign>
+		<xpad>0</xpad>
+		<ypad>0</ypad>
+	      </widget>
+
+	      <widget>
+		<class>GtkLabel</class>
+		<child_name>CList:title</child_name>
+		<name>label7</name>
+		<label>Protocolos</label>
+		<justify>GTK_JUSTIFY_CENTER</justify>
+		<wrap>False</wrap>
+		<xalign>0.5</xalign>
+		<yalign>0.5</yalign>
+		<xpad>0</xpad>
+		<ypad>0</ypad>
+	      </widget>
+	    </widget>
+	  </widget>
+
+	  <widget>
+	    <class>GtkScrolledWindow</class>
+	    <name>scrolledwindow2</name>
+	    <hscrollbar_policy>GTK_POLICY_ALWAYS</hscrollbar_policy>
+	    <vscrollbar_policy>GTK_POLICY_ALWAYS</vscrollbar_policy>
+	    <hupdate_policy>GTK_UPDATE_CONTINUOUS</hupdate_policy>
+	    <vupdate_policy>GTK_UPDATE_CONTINUOUS</vupdate_policy>
+	    <child>
+	      <shrink>True</shrink>
+	      <resize>True</resize>
+	    </child>
+
+	    <widget>
+	      <class>GtkViewport</class>
+	      <name>viewport1</name>
+	      <shadow_type>GTK_SHADOW_IN</shadow_type>
+
+	      <widget>
+		<class>GtkTree</class>
+		<name>tree1</name>
+		<selection_mode>GTK_SELECTION_SINGLE</selection_mode>
+		<view_mode>GTK_TREE_VIEW_LINE</view_mode>
+		<view_line>True</view_line>
+	      </widget>
+	    </widget>
+	  </widget>
+	</widget>
+      </widget>
+
+      <widget>
+	<class>GtkLabel</class>
+	<child_name>Notebook:tab</child_name>
+	<name>label1</name>
+	<width>140</width>
+	<label>Tramas capturadas</label>
+	<justify>GTK_JUSTIFY_CENTER</justify>
+	<wrap>False</wrap>
+	<xalign>0.5</xalign>
+	<yalign>0.5</yalign>
+	<xpad>0</xpad>
+	<ypad>0</ypad>
+      </widget>
+
+      <widget>
+	<class>GtkFixed</class>
+	<name>fixed7</name>
+
+	<widget>
+	  <class>GtkLabel</class>
+	  <name>label21</name>
+	  <x>8</x>
+	  <y>8</y>
+	  <width>240</width>
+	  <height>24</height>
+	  <label>ESTADISTICAS DE CAPTURA</label>
+	  <justify>GTK_JUSTIFY_CENTER</justify>
+	  <wrap>True</wrap>
+	  <xalign>0.5</xalign>
+	  <yalign>0.5</yalign>
+	  <xpad>0</xpad>
+	  <ypad>0</ypad>
+	</widget>
+
+	<widget>
+	  <class>GtkLabel</class>
+	  <name>label22</name>
+	  <x>32</x>
+	  <y>40</y>
+	  <width>112</width>
+	  <height>16</height>
+	  <label>Inicio de captura:</label>
+	  <justify>GTK_JUSTIFY_LEFT</justify>
+	  <wrap>True</wrap>
+	  <xalign>0.5</xalign>
+	  <yalign>0.5</yalign>
+	  <xpad>0</xpad>
+	  <ypad>0</ypad>
+	</widget>
+
+	<widget>
+	  <class>GtkLabel</class>
+	  <name>label23</name>
+	  <x>32</x>
+	  <y>64</y>
+	  <width>96</width>
+	  <height>16</height>
+	  <label>Fin de captura:</label>
+	  <justify>GTK_JUSTIFY_LEFT</justify>
+	  <wrap>True</wrap>
+	  <xalign>0.5</xalign>
+	  <yalign>0.5</yalign>
+	  <xpad>0</xpad>
+	  <ypad>0</ypad>
+	</widget>
+
+	<widget>
+	  <class>GtkLabel</class>
+	  <name>label_estafin</name>
+	  <x>136</x>
+	  <y>64</y>
+	  <width>248</width>
+	  <height>16</height>
+	  <label>xxxxxxx</label>
+	  <justify>GTK_JUSTIFY_LEFT</justify>
+	  <wrap>True</wrap>
+	  <xalign>0.5</xalign>
+	  <yalign>0.5</yalign>
+	  <xpad>0</xpad>
+	  <ypad>0</ypad>
+	</widget>
+
+	<widget>
+	  <class>GtkLabel</class>
+	  <name>label26</name>
+	  <x>32</x>
+	  <y>88</y>
+	  <width>184</width>
+	  <height>16</height>
+	  <label>Numero de tramas capturadas:</label>
+	  <justify>GTK_JUSTIFY_LEFT</justify>
+	  <wrap>True</wrap>
+	  <xalign>0.5</xalign>
+	  <yalign>0.5</yalign>
+	  <xpad>0</xpad>
+	  <ypad>0</ypad>
+	</widget>
+
+	<widget>
+	  <class>GtkLabel</class>
+	  <name>label_estanumtram</name>
+	  <x>216</x>
+	  <y>88</y>
+	  <width>56</width>
+	  <height>16</height>
+	  <label>xxx</label>
+	  <justify>GTK_JUSTIFY_LEFT</justify>
+	  <wrap>True</wrap>
+	  <xalign>0.5</xalign>
+	  <yalign>0.5</yalign>
+	  <xpad>0</xpad>
+	  <ypad>0</ypad>
+	</widget>
+
+	<widget>
+	  <class>GtkHSeparator</class>
+	  <name>hseparator2</name>
+	  <x>32</x>
+	  <y>104</y>
+	  <width>504</width>
+	  <height>16</height>
+	</widget>
+
+	<widget>
+	  <class>GtkLabel</class>
+	  <name>label34</name>
+	  <x>32</x>
+	  <y>120</y>
+	  <width>192</width>
+	  <height>24</height>
+	  <label>ESTADISTICAS DE RED LOCAL</label>
+	  <justify>GTK_JUSTIFY_CENTER</justify>
+	  <wrap>True</wrap>
+	  <xalign>0.5</xalign>
+	  <yalign>0.5</yalign>
+	  <xpad>0</xpad>
+	  <ypad>0</ypad>
+	</widget>
+
+	<widget>
+	  <class>GtkLabel</class>
+	  <name>label36</name>
+	  <x>240</x>
+	  <y>120</y>
+	  <width>16</width>
+	  <height>24</height>
+	  <label>(</label>
+	  <justify>GTK_JUSTIFY_CENTER</justify>
+	  <wrap>False</wrap>
+	  <xalign>0.5</xalign>
+	  <yalign>0.5</yalign>
+	  <xpad>0</xpad>
+	  <ypad>0</ypad>
+	</widget>
+
+	<widget>
+	  <class>GtkLabel</class>
+	  <name>label_estalaf</name>
+	  <x>256</x>
+	  <y>120</y>
+	  <width>24</width>
+	  <height>24</height>
+	  <label>X</label>
+	  <justify>GTK_JUSTIFY_CENTER</justify>
+	  <wrap>False</wrap>
+	  <xalign>0.5</xalign>
+	  <yalign>0.5</yalign>
+	  <xpad>0</xpad>
+	  <ypad>0</ypad>
+	</widget>
+
+	<widget>
+	  <class>GtkLabel</class>
+	  <name>label38</name>
+	  <x>280</x>
+	  <y>120</y>
+	  <width>24</width>
+	  <height>24</height>
+	  <label>de</label>
+	  <justify>GTK_JUSTIFY_CENTER</justify>
+	  <wrap>False</wrap>
+	  <xalign>0.5</xalign>
+	  <yalign>0.5</yalign>
+	  <xpad>0</xpad>
+	  <ypad>0</ypad>
+	</widget>
+
+	<widget>
+	  <class>GtkLabel</class>
+	  <name>label_estaltf</name>
+	  <x>304</x>
+	  <y>120</y>
+	  <width>24</width>
+	  <height>24</height>
+	  <label>Y</label>
+	  <justify>GTK_JUSTIFY_CENTER</justify>
+	  <wrap>False</wrap>
+	  <xalign>0.5</xalign>
+	  <yalign>0.5</yalign>
+	  <xpad>0</xpad>
+	  <ypad>0</ypad>
+	</widget>
+
+	<widget>
+	  <class>GtkLabel</class>
+	  <name>label35</name>
+	  <x>328</x>
+	  <y>120</y>
+	  <width>120</width>
+	  <height>24</height>
+	  <label>tramas analizadas)</label>
+	  <justify>GTK_JUSTIFY_CENTER</justify>
+	  <wrap>False</wrap>
+	  <xalign>0.5</xalign>
+	  <yalign>0.5</yalign>
+	  <xpad>0</xpad>
+	  <ypad>0</ypad>
+	</widget>
+
+	<widget>
+	  <class>GtkScrolledWindow</class>
+	  <name>scrolledwindow4</name>
+	  <x>32</x>
+	  <y>144</y>
+	  <width>528</width>
+	  <height>152</height>
+	  <hscrollbar_policy>GTK_POLICY_AUTOMATIC</hscrollbar_policy>
+	  <vscrollbar_policy>GTK_POLICY_ALWAYS</vscrollbar_policy>
+	  <hupdate_policy>GTK_UPDATE_CONTINUOUS</hupdate_policy>
+	  <vupdate_policy>GTK_UPDATE_CONTINUOUS</vupdate_policy>
+
+	  <widget>
+	    <class>GtkCList</class>
+	    <name>clist3</name>
+	    <width>504</width>
+	    <height>144</height>
+	    <can_focus>True</can_focus>
+	    <columns>5</columns>
+	    <column_widths>95,86,90,95,103</column_widths>
+	    <selection_mode>GTK_SELECTION_SINGLE</selection_mode>
+	    <show_titles>True</show_titles>
+	    <shadow_type>GTK_SHADOW_IN</shadow_type>
+
+	    <widget>
+	      <class>GtkLabel</class>
+	      <child_name>CList:title</child_name>
+	      <name>label29</name>
+	      <label>Maquina</label>
+	      <justify>GTK_JUSTIFY_CENTER</justify>
+	      <wrap>False</wrap>
+	      <xalign>0.5</xalign>
+	      <yalign>0.5</yalign>
+	      <xpad>0</xpad>
+	      <ypad>0</ypad>
+	    </widget>
+
+	    <widget>
+	      <class>GtkLabel</class>
+	      <child_name>CList:title</child_name>
+	      <name>label30</name>
+	      <label>Bytes enviados</label>
+	      <justify>GTK_JUSTIFY_CENTER</justify>
+	      <wrap>False</wrap>
+	      <xalign>0.5</xalign>
+	      <yalign>0.5</yalign>
+	      <xpad>0</xpad>
+	      <ypad>0</ypad>
+	    </widget>
+
+	    <widget>
+	      <class>GtkLabel</class>
+	      <child_name>CList:title</child_name>
+	      <name>label31</name>
+	      <label>Bytes recibidos</label>
+	      <justify>GTK_JUSTIFY_CENTER</justify>
+	      <wrap>False</wrap>
+	      <xalign>0.5</xalign>
+	      <yalign>0.5</yalign>
+	      <xpad>0</xpad>
+	      <ypad>0</ypad>
+	    </widget>
+
+	    <widget>
+	      <class>GtkLabel</class>
+	      <child_name>CList:title</child_name>
+	      <name>label32</name>
+	      <label>Tramas enviadas</label>
+	      <justify>GTK_JUSTIFY_CENTER</justify>
+	      <wrap>False</wrap>
+	      <xalign>0.5</xalign>
+	      <yalign>0.5</yalign>
+	      <xpad>0</xpad>
+	      <ypad>0</ypad>
+	    </widget>
+
+	    <widget>
+	      <class>GtkLabel</class>
+	      <child_name>CList:title</child_name>
+	      <name>label33</name>
+	      <label>Tramas recibidas</label>
+	      <justify>GTK_JUSTIFY_CENTER</justify>
+	      <wrap>False</wrap>
+	      <xalign>0.5</xalign>
+	      <yalign>0.5</yalign>
+	      <xpad>0</xpad>
+	      <ypad>0</ypad>
+	    </widget>
+	  </widget>
+	</widget>
+
+	<widget>
+	  <class>GtkLabel</class>
+	  <name>label51</name>
+	  <x>32</x>
+	  <y>304</y>
+	  <width>192</width>
+	  <height>24</height>
+	  <label>ESTADISTICAS DE RED IP</label>
+	  <justify>GTK_JUSTIFY_CENTER</justify>
+	  <wrap>True</wrap>
+	  <xalign>0.5</xalign>
+	  <yalign>0.5</yalign>
+	  <xpad>0</xpad>
+	  <ypad>0</ypad>
+	</widget>
+
+	<widget>
+	  <class>GtkLabel</class>
+	  <name>label52</name>
+	  <x>240</x>
+	  <y>304</y>
+	  <width>16</width>
+	  <height>24</height>
+	  <label>(</label>
+	  <justify>GTK_JUSTIFY_CENTER</justify>
+	  <wrap>False</wrap>
+	  <xalign>0.5</xalign>
+	  <yalign>0.5</yalign>
+	  <xpad>0</xpad>
+	  <ypad>0</ypad>
+	</widget>
+
+	<widget>
+	  <class>GtkLabel</class>
+	  <name>label_estaiaf</name>
+	  <x>256</x>
+	  <y>304</y>
+	  <width>24</width>
+	  <height>24</height>
+	  <label>X</label>
+	  <justify>GTK_JUSTIFY_CENTER</justify>
+	  <wrap>False</wrap>
+	  <xalign>0.5</xalign>
+	  <yalign>0.5</yalign>
+	  <xpad>0</xpad>
+	  <ypad>0</ypad>
+	</widget>
+
+	<widget>
+	  <class>GtkLabel</class>
+	  <name>label53</name>
+	  <x>280</x>
+	  <y>304</y>
+	  <width>24</width>
+	  <height>24</height>
+	  <label>de</label>
+	  <justify>GTK_JUSTIFY_CENTER</justify>
+	  <wrap>False</wrap>
+	  <xalign>0.5</xalign>
+	  <yalign>0.5</yalign>
+	  <xpad>0</xpad>
+	  <ypad>0</ypad>
+	</widget>
+
+	<widget>
+	  <class>GtkLabel</class>
+	  <name>label_estaitf</name>
+	  <x>304</x>
+	  <y>304</y>
+	  <width>24</width>
+	  <height>24</height>
+	  <label>Y</label>
+	  <justify>GTK_JUSTIFY_CENTER</justify>
+	  <wrap>False</wrap>
+	  <xalign>0.5</xalign>
+	  <yalign>0.5</yalign>
+	  <xpad>0</xpad>
+	  <ypad>0</ypad>
+	</widget>
+
+	<widget>
+	  <class>GtkLabel</class>
+	  <name>label54</name>
+	  <x>328</x>
+	  <y>304</y>
+	  <width>120</width>
+	  <height>24</height>
+	  <label>tramas analizadas)</label>
+	  <justify>GTK_JUSTIFY_CENTER</justify>
+	  <wrap>False</wrap>
+	  <xalign>0.5</xalign>
+	  <yalign>0.5</yalign>
+	  <xpad>0</xpad>
+	  <ypad>0</ypad>
+	</widget>
+
+	<widget>
+	  <class>GtkScrolledWindow</class>
+	  <name>scrolledwindow5</name>
+	  <x>32</x>
+	  <y>328</y>
+	  <width>528</width>
+	  <height>160</height>
+	  <hscrollbar_policy>GTK_POLICY_AUTOMATIC</hscrollbar_policy>
+	  <vscrollbar_policy>GTK_POLICY_ALWAYS</vscrollbar_policy>
+	  <hupdate_policy>GTK_UPDATE_CONTINUOUS</hupdate_policy>
+	  <vupdate_policy>GTK_UPDATE_CONTINUOUS</vupdate_policy>
+
+	  <widget>
+	    <class>GtkCList</class>
+	    <name>clist4</name>
+	    <width>504</width>
+	    <height>152</height>
+	    <can_focus>True</can_focus>
+	    <columns>5</columns>
+	    <column_widths>95,86,90,95,103</column_widths>
+	    <selection_mode>GTK_SELECTION_SINGLE</selection_mode>
+	    <show_titles>True</show_titles>
+	    <shadow_type>GTK_SHADOW_IN</shadow_type>
+
+	    <widget>
+	      <class>GtkLabel</class>
+	      <child_name>CList:title</child_name>
+	      <name>label43</name>
+	      <label>Maquina</label>
+	      <justify>GTK_JUSTIFY_CENTER</justify>
+	      <wrap>False</wrap>
+	      <xalign>0.5</xalign>
+	      <yalign>0.5</yalign>
+	      <xpad>0</xpad>
+	      <ypad>0</ypad>
+	    </widget>
+
+	    <widget>
+	      <class>GtkLabel</class>
+	      <child_name>CList:title</child_name>
+	      <name>label44</name>
+	      <label>Bytes enviados</label>
+	      <justify>GTK_JUSTIFY_CENTER</justify>
+	      <wrap>False</wrap>
+	      <xalign>0.5</xalign>
+	      <yalign>0.5</yalign>
+	      <xpad>0</xpad>
+	      <ypad>0</ypad>
+	    </widget>
+
+	    <widget>
+	      <class>GtkLabel</class>
+	      <child_name>CList:title</child_name>
+	      <name>label45</name>
+	      <label>Bytes recibidos</label>
+	      <justify>GTK_JUSTIFY_CENTER</justify>
+	      <wrap>False</wrap>
+	      <xalign>0.5</xalign>
+	      <yalign>0.5</yalign>
+	      <xpad>0</xpad>
+	      <ypad>0</ypad>
+	    </widget>
+
+	    <widget>
+	      <class>GtkLabel</class>
+	      <child_name>CList:title</child_name>
+	      <name>label46</name>
+	      <label>Tramas enviadas</label>
+	      <justify>GTK_JUSTIFY_CENTER</justify>
+	      <wrap>False</wrap>
+	      <xalign>0.5</xalign>
+	      <yalign>0.5</yalign>
+	      <xpad>0</xpad>
+	      <ypad>0</ypad>
+	    </widget>
+
+	    <widget>
+	      <class>GtkLabel</class>
+	      <child_name>CList:title</child_name>
+	      <name>label47</name>
+	      <label>Tramas recibidas</label>
+	      <justify>GTK_JUSTIFY_CENTER</justify>
+	      <wrap>False</wrap>
+	      <xalign>0.5</xalign>
+	      <yalign>0.5</yalign>
+	      <xpad>0</xpad>
+	      <ypad>0</ypad>
+	    </widget>
+	  </widget>
+	</widget>
+
+	<widget>
+	  <class>GtkLabel</class>
+	  <name>label_estainicio</name>
+	  <x>136</x>
+	  <y>40</y>
+	  <width>248</width>
+	  <height>16</height>
+	  <label>xxxxxxx</label>
+	  <justify>GTK_JUSTIFY_LEFT</justify>
+	  <wrap>True</wrap>
+	  <xalign>0.5</xalign>
+	  <yalign>0.5</yalign>
+	  <xpad>0</xpad>
+	  <ypad>0</ypad>
+	</widget>
+      </widget>
+
+      <widget>
+	<class>GtkLabel</class>
+	<child_name>Notebook:tab</child_name>
+	<name>label2</name>
+	<width>140</width>
+	<height>11</height>
+	<label>Estadisticas de captura</label>
+	<justify>GTK_JUSTIFY_CENTER</justify>
+	<wrap>False</wrap>
+	<xalign>0.5</xalign>
+	<yalign>0.5</yalign>
+	<xpad>0</xpad>
+	<ypad>0</ypad>
+      </widget>
+    </widget>
+  </widget>
+</widget>
+
+<widget>
+  <class>GtkWindow</class>
+  <name>win_cap</name>
+  <border_width>4</border_width>
+  <width>400</width>
+  <height>434</height>
+  <signal>
+    <name>delete_event</name>
+    <handler>on_win_cap_delete_event</handler>
+    <last_modification_time>Mon, 16 Jun 2003 11:37:19 GMT</last_modification_time>
+  </signal>
+  <title>      </title>
+  <type>GTK_WINDOW_DIALOG</type>
+  <position>GTK_WIN_POS_CENTER</position>
+  <modal>True</modal>
+  <allow_shrink>False</allow_shrink>
+  <allow_grow>True</allow_grow>
+  <auto_shrink>False</auto_shrink>
+
+  <widget>
+    <class>GtkFixed</class>
+    <name>fixed2</name>
+
+    <widget>
+      <class>GtkEntry</class>
+      <name>entry_dev</name>
+      <x>206</x>
+      <y>38</y>
+      <width>100</width>
+      <height>24</height>
+      <can_focus>True</can_focus>
+      <signal>
+	<name>focus_out_event</name>
+	<handler>on_entry_dev_focus_out_event</handler>
+	<last_modification_time>Thu, 29 May 2003 12:26:18 GMT</last_modification_time>
+      </signal>
+      <editable>True</editable>
+      <text_visible>True</text_visible>
+      <text_max_length>0</text_max_length>
+      <text></text>
+    </widget>
+
+    <widget>
+      <class>GtkButton</class>
+      <name>button1</name>
+      <x>100</x>
+      <y>368</y>
+      <width>64</width>
+      <height>30</height>
+      <can_focus>True</can_focus>
+      <signal>
+	<name>clicked</name>
+	<handler>on_button1_clicked</handler>
+	<last_modification_time>Wed, 28 May 2003 19:54:49 GMT</last_modification_time>
+      </signal>
+      <label>Capturar</label>
+      <relief>GTK_RELIEF_NORMAL</relief>
+    </widget>
+
+    <widget>
+      <class>GtkButton</class>
+      <name>button4</name>
+      <x>236</x>
+      <y>368</y>
+      <width>64</width>
+      <height>30</height>
+      <can_focus>True</can_focus>
+      <signal>
+	<name>clicked</name>
+	<handler>on_button4_clicked</handler>
+	<last_modification_time>Fri, 30 May 2003 09:45:41 GMT</last_modification_time>
+      </signal>
+      <label>Parar</label>
+      <relief>GTK_RELIEF_NORMAL</relief>
+    </widget>
+
+    <widget>
+      <class>GtkSpinButton</class>
+      <name>spin_numofpkt</name>
+      <x>272</x>
+      <y>135</y>
+      <width>64</width>
+      <height>25</height>
+      <can_focus>True</can_focus>
+      <climb_rate>1</climb_rate>
+      <digits>0</digits>
+      <numeric>False</numeric>
+      <update_policy>GTK_UPDATE_ALWAYS</update_policy>
+      <snap>False</snap>
+      <wrap>False</wrap>
+      <value>1</value>
+      <lower>1</lower>
+      <upper>10000</upper>
+      <step>1</step>
+      <page>10</page>
+      <page_size>10</page_size>
+    </widget>
+
+    <widget>
+      <class>GtkSpinButton</class>
+      <name>spin_maxtime</name>
+      <x>272</x>
+      <y>175</y>
+      <width>64</width>
+      <height>25</height>
+      <can_focus>True</can_focus>
+      <climb_rate>1</climb_rate>
+      <digits>0</digits>
+      <numeric>False</numeric>
+      <update_policy>GTK_UPDATE_ALWAYS</update_policy>
+      <snap>False</snap>
+      <wrap>False</wrap>
+      <value>1</value>
+      <lower>1</lower>
+      <upper>100000</upper>
+      <step>1</step>
+      <page>10</page>
+      <page_size>10</page_size>
+    </widget>
+
+    <widget>
+      <class>GtkSpinButton</class>
+      <name>spin_maxbytes</name>
+      <x>272</x>
+      <y>215</y>
+      <width>64</width>
+      <height>25</height>
+      <can_focus>True</can_focus>
+      <climb_rate>1</climb_rate>
+      <digits>0</digits>
+      <numeric>False</numeric>
+      <update_policy>GTK_UPDATE_ALWAYS</update_policy>
+      <snap>False</snap>
+      <wrap>False</wrap>
+      <value>0</value>
+      <lower>0</lower>
+      <upper>2000</upper>
+      <step>1</step>
+      <page>10</page>
+      <page_size>10</page_size>
+    </widget>
+
+    <widget>
+      <class>GtkEntry</class>
+      <name>entry_filter</name>
+      <x>96</x>
+      <y>300</y>
+      <width>232</width>
+      <height>40</height>
+      <can_focus>True</can_focus>
+      <editable>True</editable>
+      <text_visible>True</text_visible>
+      <text_max_length>0</text_max_length>
+      <text></text>
+    </widget>
+
+    <widget>
+      <class>GtkHSeparator</class>
+      <name>hseparator1</name>
+      <x>50</x>
+      <y>110</y>
+      <width>300</width>
+      <height>16</height>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label_net_ip</name>
+      <x>206</x>
+      <y>62</y>
+      <width>100</width>
+      <height>24</height>
+      <label></label>
+      <justify>GTK_JUSTIFY_LEFT</justify>
+      <wrap>True</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label_net_mask</name>
+      <x>206</x>
+      <y>86</y>
+      <width>100</width>
+      <height>24</height>
+      <label></label>
+      <justify>GTK_JUSTIFY_LEFT</justify>
+      <wrap>True</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label9</name>
+      <x>92</x>
+      <y>38</y>
+      <width>92</width>
+      <height>24</height>
+      <label>Distpositivo</label>
+      <justify>GTK_JUSTIFY_LEFT</justify>
+      <wrap>True</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label10</name>
+      <x>92</x>
+      <y>62</y>
+      <width>92</width>
+      <height>24</height>
+      <label>IP de red</label>
+      <justify>GTK_JUSTIFY_LEFT</justify>
+      <wrap>True</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label16</name>
+      <x>92</x>
+      <y>86</y>
+      <width>92</width>
+      <height>24</height>
+      <label>IP de mascara</label>
+      <justify>GTK_JUSTIFY_LEFT</justify>
+      <wrap>True</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+
+    <widget>
+      <class>GtkHSeparator</class>
+      <name>hseparator3</name>
+      <x>48</x>
+      <y>277</y>
+      <width>300</width>
+      <height>16</height>
+    </widget>
+
+    <widget>
+      <class>GtkHSeparator</class>
+      <name>hseparator4</name>
+      <x>48</x>
+      <y>347</y>
+      <width>300</width>
+      <height>16</height>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label48</name>
+      <x>32</x>
+      <y>308</y>
+      <width>48</width>
+      <height>24</height>
+      <label>Filtro</label>
+      <justify>GTK_JUSTIFY_CENTER</justify>
+      <wrap>False</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label49</name>
+      <x>72</x>
+      <y>0</y>
+      <width>240</width>
+      <height>24</height>
+      <label>OPCIONES DE CAPTURA</label>
+      <justify>GTK_JUSTIFY_CENTER</justify>
+      <wrap>False</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+
+    <widget>
+      <class>GtkCheckButton</class>
+      <name>check_maxtime</name>
+      <x>50</x>
+      <y>170</y>
+      <width>190</width>
+      <height>32</height>
+      <can_focus>True</can_focus>
+      <signal>
+	<name>toggled</name>
+	<handler>on_check_maxtime_toggled</handler>
+	<last_modification_time>Wed, 25 Jun 2003 17:28:33 GMT</last_modification_time>
+      </signal>
+      <label>Numero maximo de
+segundos a capturar</label>
+      <active>False</active>
+      <draw_indicator>True</draw_indicator>
+    </widget>
+
+    <widget>
+      <class>GtkCheckButton</class>
+      <name>check_promis</name>
+      <x>50</x>
+      <y>250</y>
+      <width>190</width>
+      <height>24</height>
+      <can_focus>True</can_focus>
+      <label>Captura en modo promiscuo</label>
+      <active>False</active>
+      <draw_indicator>True</draw_indicator>
+    </widget>
+
+    <widget>
+      <class>GtkCheckButton</class>
+      <name>check_numofpkt</name>
+      <x>50</x>
+      <y>130</y>
+      <width>190</width>
+      <height>32</height>
+      <can_focus>True</can_focus>
+      <signal>
+	<name>toggled</name>
+	<handler>on_check_numofpkt_toggled</handler>
+	<last_modification_time>Fri, 30 May 2003 20:09:42 GMT</last_modification_time>
+      </signal>
+      <label>Numero maximo de 
+tramas a capturar</label>
+      <active>False</active>
+      <draw_indicator>True</draw_indicator>
+    </widget>
+
+    <widget>
+      <class>GtkCheckButton</class>
+      <name>check_maxbytes</name>
+      <x>50</x>
+      <y>210</y>
+      <width>190</width>
+      <height>32</height>
+      <can_focus>True</can_focus>
+      <signal>
+	<name>toggled</name>
+	<handler>on_check_maxbytes_toggled</handler>
+	<last_modification_time>Fri, 30 May 2003 20:31:29 GMT</last_modification_time>
+      </signal>
+      <label>Maximo numero de bytes 
+capturados por trama</label>
+      <active>False</active>
+      <draw_indicator>True</draw_indicator>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label_cap1</name>
+      <x>104</x>
+      <y>408</y>
+      <width>200</width>
+      <height>16</height>
+      <visible>False</visible>
+      <label>Capturando tramas...</label>
+      <justify>GTK_JUSTIFY_CENTER</justify>
+      <wrap>False</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+  </widget>
+</widget>
+
+<widget>
+  <class>GtkWindow</class>
+  <name>win_error</name>
+  <width>350</width>
+  <height>200</height>
+  <signal>
+    <name>delete_event</name>
+    <handler>on_win_error_delete_event</handler>
+    <last_modification_time>Mon, 16 Jun 2003 11:58:31 GMT</last_modification_time>
+  </signal>
+  <title>   </title>
+  <type>GTK_WINDOW_DIALOG</type>
+  <position>GTK_WIN_POS_CENTER</position>
+  <modal>True</modal>
+  <allow_shrink>False</allow_shrink>
+  <allow_grow>True</allow_grow>
+  <auto_shrink>False</auto_shrink>
+
+  <widget>
+    <class>GtkFixed</class>
+    <name>fixed4</name>
+
+    <widget>
+      <class>GtkButton</class>
+      <name>button_ok</name>
+      <x>144</x>
+      <y>152</y>
+      <width>64</width>
+      <height>30</height>
+      <can_focus>True</can_focus>
+      <signal>
+	<name>clicked</name>
+	<handler>on_button_ok_clicked</handler>
+	<last_modification_time>Wed, 04 Jun 2003 10:47:25 GMT</last_modification_time>
+      </signal>
+      <label>Aceptar</label>
+      <relief>GTK_RELIEF_NORMAL</relief>
+    </widget>
+
+    <widget>
+      <class>GtkPixmap</class>
+      <name>pixmap_error</name>
+      <x>8</x>
+      <y>40</y>
+      <width>76</width>
+      <height>76</height>
+      <filename>error.xpm</filename>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+      <build_insensitive>True</build_insensitive>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label_error</name>
+      <x>96</x>
+      <y>24</y>
+      <width>204</width>
+      <height>95</height>
+      <label>label17</label>
+      <justify>GTK_JUSTIFY_LEFT</justify>
+      <wrap>True</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+  </widget>
+</widget>
+
+<widget>
+  <class>GtkWindow</class>
+  <name>win_save</name>
+  <width>408</width>
+  <height>355</height>
+  <signal>
+    <name>delete_event</name>
+    <handler>on_win_save_delete_event</handler>
+    <last_modification_time>Mon, 16 Jun 2003 12:05:07 GMT</last_modification_time>
+  </signal>
+  <title>     </title>
+  <type>GTK_WINDOW_DIALOG</type>
+  <position>GTK_WIN_POS_CENTER</position>
+  <modal>True</modal>
+  <allow_shrink>False</allow_shrink>
+  <allow_grow>True</allow_grow>
+  <auto_shrink>False</auto_shrink>
+
+  <widget>
+    <class>GtkFixed</class>
+    <name>fixed5</name>
+
+    <widget>
+      <class>GtkEntry</class>
+      <name>entry1</name>
+      <x>200</x>
+      <y>264</y>
+      <width>152</width>
+      <height>24</height>
+      <can_focus>True</can_focus>
+      <has_focus>True</has_focus>
+      <editable>True</editable>
+      <text_visible>True</text_visible>
+      <text_max_length>0</text_max_length>
+      <text></text>
+    </widget>
+
+    <widget>
+      <class>GtkButton</class>
+      <name>button_aceptar</name>
+      <x>96</x>
+      <y>312</y>
+      <width>64</width>
+      <height>30</height>
+      <can_focus>True</can_focus>
+      <signal>
+	<name>clicked</name>
+	<handler>on_button_aceptar_clicked</handler>
+	<last_modification_time>Thu, 12 Jun 2003 12:21:43 GMT</last_modification_time>
+      </signal>
+      <label>Aceptar</label>
+      <relief>GTK_RELIEF_NORMAL</relief>
+    </widget>
+
+    <widget>
+      <class>GtkButton</class>
+      <name>button_cancelar</name>
+      <x>240</x>
+      <y>312</y>
+      <width>64</width>
+      <height>30</height>
+      <can_focus>True</can_focus>
+      <signal>
+	<name>clicked</name>
+	<handler>on_button_cancelar_clicked</handler>
+	<last_modification_time>Sat, 14 Jun 2003 05:14:24 GMT</last_modification_time>
+      </signal>
+      <label>Cancelar</label>
+      <relief>GTK_RELIEF_NORMAL</relief>
+    </widget>
+
+    <widget>
+      <class>GtkScrolledWindow</class>
+      <name>scrolledwindow3</name>
+      <x>56</x>
+      <y>40</y>
+      <width>296</width>
+      <height>216</height>
+      <hscrollbar_policy>GTK_POLICY_ALWAYS</hscrollbar_policy>
+      <vscrollbar_policy>GTK_POLICY_ALWAYS</vscrollbar_policy>
+      <hupdate_policy>GTK_UPDATE_CONTINUOUS</hupdate_policy>
+      <vupdate_policy>GTK_UPDATE_CONTINUOUS</vupdate_policy>
+
+      <widget>
+	<class>GtkCList</class>
+	<name>clist2</name>
+	<can_focus>True</can_focus>
+	<signal>
+	  <name>select_row</name>
+	  <handler>on_clist2_select_row</handler>
+	  <last_modification_time>Sat, 14 Jun 2003 10:36:12 GMT</last_modification_time>
+	</signal>
+	<columns>1</columns>
+	<column_widths>80</column_widths>
+	<selection_mode>GTK_SELECTION_SINGLE</selection_mode>
+	<show_titles>True</show_titles>
+	<shadow_type>GTK_SHADOW_IN</shadow_type>
+
+	<widget>
+	  <class>GtkLabel</class>
+	  <child_name>CList:title</child_name>
+	  <name>label18</name>
+	  <label></label>
+	  <justify>GTK_JUSTIFY_CENTER</justify>
+	  <wrap>False</wrap>
+	  <xalign>0.5</xalign>
+	  <yalign>0.5</yalign>
+	  <xpad>0</xpad>
+	  <ypad>0</ypad>
+	</widget>
+      </widget>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label17</name>
+      <x>56</x>
+      <y>264</y>
+      <width>128</width>
+      <height>24</height>
+      <label>Nombre del archivo</label>
+      <justify>GTK_JUSTIFY_CENTER</justify>
+      <wrap>False</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label19</name>
+      <x>168</x>
+      <y>8</y>
+      <width>120</width>
+      <height>32</height>
+      <label>ABRIR</label>
+      <justify>GTK_JUSTIFY_LEFT</justify>
+      <wrap>True</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+
+    <widget>
+      <class>GtkPixmap</class>
+      <name>pixmap2</name>
+      <x>120</x>
+      <y>8</y>
+      <width>40</width>
+      <height>32</height>
+      <filename>save.xpm</filename>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+      <build_insensitive>True</build_insensitive>
+    </widget>
+  </widget>
+</widget>
+
+<widget>
+  <class>GtkWindow</class>
+  <name>win_sure</name>
+  <width>350</width>
+  <height>200</height>
+  <signal>
+    <name>delete_event</name>
+    <handler>on_win_sure_delete_event</handler>
+    <last_modification_time>Mon, 16 Jun 2003 12:13:01 GMT</last_modification_time>
+  </signal>
+  <title>       </title>
+  <type>GTK_WINDOW_DIALOG</type>
+  <position>GTK_WIN_POS_CENTER</position>
+  <modal>True</modal>
+  <allow_shrink>False</allow_shrink>
+  <allow_grow>True</allow_grow>
+  <auto_shrink>False</auto_shrink>
+
+  <widget>
+    <class>GtkFixed</class>
+    <name>fixed6</name>
+
+    <widget>
+      <class>GtkButton</class>
+      <name>surebutton_aceptar</name>
+      <x>80</x>
+      <y>144</y>
+      <width>64</width>
+      <height>30</height>
+      <can_focus>True</can_focus>
+      <has_focus>True</has_focus>
+      <signal>
+	<name>clicked</name>
+	<handler>on_surebutton_aceptar_clicked</handler>
+	<last_modification_time>Sat, 14 Jun 2003 05:26:54 GMT</last_modification_time>
+      </signal>
+      <label>Aceptar</label>
+      <relief>GTK_RELIEF_NORMAL</relief>
+    </widget>
+
+    <widget>
+      <class>GtkButton</class>
+      <name>surebutton_cancelar</name>
+      <x>216</x>
+      <y>144</y>
+      <width>64</width>
+      <height>30</height>
+      <can_focus>True</can_focus>
+      <signal>
+	<name>clicked</name>
+	<handler>on_surebutton_cancelar_clicked</handler>
+	<last_modification_time>Sat, 14 Jun 2003 05:26:58 GMT</last_modification_time>
+      </signal>
+      <label>Cancelar</label>
+      <relief>GTK_RELIEF_NORMAL</relief>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label20</name>
+      <x>96</x>
+      <y>24</y>
+      <width>204</width>
+      <height>95</height>
+      <label>label20</label>
+      <justify>GTK_JUSTIFY_LEFT</justify>
+      <wrap>True</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+
+    <widget>
+      <class>GtkPixmap</class>
+      <name>pixmap1</name>
+      <x>8</x>
+      <y>32</y>
+      <width>76</width>
+      <height>76</height>
+      <filename>question.xpm</filename>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+      <build_insensitive>True</build_insensitive>
+    </widget>
+  </widget>
+</widget>
+
+<widget>
+  <class>GtkWindow</class>
+  <name>win_options</name>
+  <width>324</width>
+  <height>306</height>
+  <signal>
+    <name>delete_event</name>
+    <handler>on_win_options_delete_event</handler>
+    <last_modification_time>Fri, 20 Jun 2003 12:13:57 GMT</last_modification_time>
+  </signal>
+  <title> </title>
+  <type>GTK_WINDOW_DIALOG</type>
+  <position>GTK_WIN_POS_CENTER</position>
+  <modal>True</modal>
+  <allow_shrink>False</allow_shrink>
+  <allow_grow>True</allow_grow>
+  <auto_shrink>False</auto_shrink>
+
+  <widget>
+    <class>GtkFixed</class>
+    <name>fixed8</name>
+
+    <widget>
+      <class>GtkButton</class>
+      <name>button6</name>
+      <x>64</x>
+      <y>256</y>
+      <width>64</width>
+      <height>30</height>
+      <can_focus>True</can_focus>
+      <signal>
+	<name>clicked</name>
+	<handler>on_button6_clicked</handler>
+	<last_modification_time>Mon, 16 Jun 2003 05:55:42 GMT</last_modification_time>
+      </signal>
+      <label>Aceptar</label>
+      <relief>GTK_RELIEF_NORMAL</relief>
+    </widget>
+
+    <widget>
+      <class>GtkButton</class>
+      <name>button7</name>
+      <x>200</x>
+      <y>256</y>
+      <width>63</width>
+      <height>30</height>
+      <can_focus>True</can_focus>
+      <signal>
+	<name>clicked</name>
+	<handler>on_button7_clicked</handler>
+	<last_modification_time>Mon, 16 Jun 2003 05:55:48 GMT</last_modification_time>
+      </signal>
+      <label>Cancelar</label>
+      <relief>GTK_RELIEF_NORMAL</relief>
+    </widget>
+
+    <widget>
+      <class>GtkCheckButton</class>
+      <name>checkbutton_ip</name>
+      <x>72</x>
+      <y>56</y>
+      <width>208</width>
+      <height>32</height>
+      <can_focus>True</can_focus>
+      <label>Sobreescribir direcciones MAC
+por direcciones IP</label>
+      <active>False</active>
+      <draw_indicator>True</draw_indicator>
+    </widget>
+
+    <widget>
+      <class>GtkCheckButton</class>
+      <name>checkbutton_ascii</name>
+      <x>72</x>
+      <y>136</y>
+      <width>208</width>
+      <height>32</height>
+      <can_focus>True</can_focus>
+      <label>Traducir datos de tramas 
+a codigo ASCII</label>
+      <active>False</active>
+      <draw_indicator>True</draw_indicator>
+    </widget>
+
+    <widget>
+      <class>GtkCheckButton</class>
+      <name>checkbutton_reset</name>
+      <x>72</x>
+      <y>176</y>
+      <width>208</width>
+      <height>32</height>
+      <can_focus>True</can_focus>
+      <label>Eliminar todas las tramas cuando
+se empieza una nueva captura</label>
+      <active>False</active>
+      <draw_indicator>True</draw_indicator>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label50</name>
+      <x>48</x>
+      <y>8</y>
+      <width>224</width>
+      <height>32</height>
+      <label>OPCIONES AVANZADAS</label>
+      <justify>GTK_JUSTIFY_CENTER</justify>
+      <wrap>False</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+
+    <widget>
+      <class>GtkCheckButton</class>
+      <name>checkbutton_tcp</name>
+      <x>72</x>
+      <y>96</y>
+      <width>208</width>
+      <height>32</height>
+      <can_focus>True</can_focus>
+      <label>Actualizar listado de paquetes 
+con puertos TCP/UDP</label>
+      <active>False</active>
+      <draw_indicator>True</draw_indicator>
+    </widget>
+  </widget>
+</widget>
+
+<widget>
+  <class>GtkWindow</class>
+  <name>win_goto</name>
+  <width>300</width>
+  <height>200</height>
+  <signal>
+    <name>delete_event</name>
+    <handler>on_win_goto_delete_event</handler>
+    <last_modification_time>Thu, 19 Jun 2003 14:07:44 GMT</last_modification_time>
+  </signal>
+  <title> </title>
+  <type>GTK_WINDOW_DIALOG</type>
+  <position>GTK_WIN_POS_CENTER</position>
+  <modal>True</modal>
+  <allow_shrink>False</allow_shrink>
+  <allow_grow>True</allow_grow>
+  <auto_shrink>False</auto_shrink>
+
+  <widget>
+    <class>GtkFixed</class>
+    <name>fixed9</name>
+
+    <widget>
+      <class>GtkSpinButton</class>
+      <name>spinbutton_gotonum</name>
+      <x>184</x>
+      <y>88</y>
+      <width>64</width>
+      <height>24</height>
+      <can_focus>True</can_focus>
+      <climb_rate>1</climb_rate>
+      <digits>0</digits>
+      <numeric>False</numeric>
+      <update_policy>GTK_UPDATE_ALWAYS</update_policy>
+      <snap>False</snap>
+      <wrap>False</wrap>
+      <value>1</value>
+      <lower>1</lower>
+      <upper>10000</upper>
+      <step>1</step>
+      <page>10</page>
+      <page_size>10</page_size>
+    </widget>
+
+    <widget>
+      <class>GtkButton</class>
+      <name>button_goto_go</name>
+      <x>64</x>
+      <y>152</y>
+      <width>64</width>
+      <height>30</height>
+      <can_focus>True</can_focus>
+      <signal>
+	<name>clicked</name>
+	<handler>on_button_goto_go_clicked</handler>
+	<last_modification_time>Thu, 19 Jun 2003 14:07:16 GMT</last_modification_time>
+      </signal>
+      <label>Ir</label>
+      <relief>GTK_RELIEF_NORMAL</relief>
+    </widget>
+
+    <widget>
+      <class>GtkButton</class>
+      <name>button_goto_cancel</name>
+      <x>176</x>
+      <y>152</y>
+      <width>64</width>
+      <height>30</height>
+      <can_focus>True</can_focus>
+      <signal>
+	<name>clicked</name>
+	<handler>on_button_goto_cancel_clicked</handler>
+	<last_modification_time>Thu, 19 Jun 2003 14:07:21 GMT</last_modification_time>
+      </signal>
+      <label>Cancelar</label>
+      <relief>GTK_RELIEF_NORMAL</relief>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label56</name>
+      <x>56</x>
+      <y>88</y>
+      <width>120</width>
+      <height>24</height>
+      <label>Ir a trama con id</label>
+      <justify>GTK_JUSTIFY_LEFT</justify>
+      <wrap>True</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label55</name>
+      <x>88</x>
+      <y>24</y>
+      <width>112</width>
+      <height>24</height>
+      <label>Buscar trama</label>
+      <justify>GTK_JUSTIFY_CENTER</justify>
+      <wrap>False</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+
+    <widget>
+      <class>GtkPixmap</class>
+      <name>pixmap3</name>
+      <x>64</x>
+      <y>22</y>
+      <width>32</width>
+      <height>24</height>
+      <filename>find.xpm</filename>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+      <build_insensitive>True</build_insensitive>
+    </widget>
+  </widget>
+</widget>
+
+<widget>
+  <class>GtkWindow</class>
+  <name>win_find</name>
+  <width>358</width>
+  <height>278</height>
+  <signal>
+    <name>delete_event</name>
+    <handler>on_win_find_delete_event</handler>
+    <last_modification_time>Thu, 19 Jun 2003 14:33:46 GMT</last_modification_time>
+  </signal>
+  <title> </title>
+  <type>GTK_WINDOW_DIALOG</type>
+  <position>GTK_WIN_POS_CENTER</position>
+  <modal>True</modal>
+  <allow_shrink>False</allow_shrink>
+  <allow_grow>True</allow_grow>
+  <auto_shrink>False</auto_shrink>
+
+  <widget>
+    <class>GtkFixed</class>
+    <name>fixed10</name>
+
+    <widget>
+      <class>GtkEntry</class>
+      <name>entry_srcaddr</name>
+      <x>160</x>
+      <y>80</y>
+      <width>158</width>
+      <height>22</height>
+      <can_focus>True</can_focus>
+      <editable>True</editable>
+      <text_visible>True</text_visible>
+      <text_max_length>0</text_max_length>
+      <text></text>
+    </widget>
+
+    <widget>
+      <class>GtkEntry</class>
+      <name>entry_destaddr</name>
+      <x>160</x>
+      <y>120</y>
+      <width>158</width>
+      <height>22</height>
+      <can_focus>True</can_focus>
+      <editable>True</editable>
+      <text_visible>True</text_visible>
+      <text_max_length>0</text_max_length>
+      <text></text>
+    </widget>
+
+    <widget>
+      <class>GtkEntry</class>
+      <name>entry_proto</name>
+      <x>160</x>
+      <y>160</y>
+      <width>158</width>
+      <height>22</height>
+      <can_focus>True</can_focus>
+      <editable>True</editable>
+      <text_visible>True</text_visible>
+      <text_max_length>0</text_max_length>
+      <text></text>
+    </widget>
+
+    <widget>
+      <class>GtkPixmap</class>
+      <name>pixmap4</name>
+      <x>96</x>
+      <y>22</y>
+      <width>32</width>
+      <height>24</height>
+      <filename>find.xpm</filename>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+      <build_insensitive>True</build_insensitive>
+    </widget>
+
+    <widget>
+      <class>GtkButton</class>
+      <name>button_find_go</name>
+      <x>96</x>
+      <y>216</y>
+      <width>64</width>
+      <height>30</height>
+      <can_focus>True</can_focus>
+      <signal>
+	<name>clicked</name>
+	<handler>on_button_find_go_clicked</handler>
+	<last_modification_time>Thu, 19 Jun 2003 14:33:28 GMT</last_modification_time>
+      </signal>
+      <label>Buscar</label>
+      <relief>GTK_RELIEF_NORMAL</relief>
+    </widget>
+
+    <widget>
+      <class>GtkButton</class>
+      <name>button_find_cancel</name>
+      <x>208</x>
+      <y>216</y>
+      <width>64</width>
+      <height>30</height>
+      <can_focus>True</can_focus>
+      <signal>
+	<name>clicked</name>
+	<handler>on_button_find_cancel_clicked</handler>
+	<last_modification_time>Thu, 19 Jun 2003 14:33:35 GMT</last_modification_time>
+      </signal>
+      <label>Cancelar</label>
+      <relief>GTK_RELIEF_NORMAL</relief>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label58</name>
+      <x>24</x>
+      <y>80</y>
+      <width>128</width>
+      <height>24</height>
+      <label>Por direccion origen</label>
+      <justify>GTK_JUSTIFY_LEFT</justify>
+      <wrap>True</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label59</name>
+      <x>24</x>
+      <y>120</y>
+      <width>128</width>
+      <height>24</height>
+      <label>Por direccion destino</label>
+      <justify>GTK_JUSTIFY_LEFT</justify>
+      <wrap>True</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label60</name>
+      <x>24</x>
+      <y>160</y>
+      <width>128</width>
+      <height>24</height>
+      <label>Por protocolo</label>
+      <justify>GTK_JUSTIFY_LEFT</justify>
+      <wrap>True</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label57</name>
+      <x>136</x>
+      <y>24</y>
+      <width>112</width>
+      <height>24</height>
+      <label>Buscar trama</label>
+      <justify>GTK_JUSTIFY_CENTER</justify>
+      <wrap>False</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+  </widget>
+</widget>
+
+<widget>
+  <class>GtkWindow</class>
+  <name>win_about</name>
+  <width>350</width>
+  <height>200</height>
+  <signal>
+    <name>delete_event</name>
+    <handler>on_win_about_delete_event</handler>
+    <last_modification_time>Mon, 23 Jun 2003 05:56:55 GMT</last_modification_time>
+  </signal>
+  <title>                     </title>
+  <type>GTK_WINDOW_DIALOG</type>
+  <position>GTK_WIN_POS_CENTER</position>
+  <modal>True</modal>
+  <allow_shrink>False</allow_shrink>
+  <allow_grow>True</allow_grow>
+  <auto_shrink>False</auto_shrink>
+
+  <widget>
+    <class>GtkFixed</class>
+    <name>fixed11</name>
+
+    <widget>
+      <class>GtkButton</class>
+      <name>button8</name>
+      <x>144</x>
+      <y>152</y>
+      <width>64</width>
+      <height>30</height>
+      <can_focus>True</can_focus>
+      <signal>
+	<name>clicked</name>
+	<handler>on_button8_clicked</handler>
+	<last_modification_time>Mon, 23 Jun 2003 06:02:53 GMT</last_modification_time>
+      </signal>
+      <label>Cerrar</label>
+      <relief>GTK_RELIEF_NORMAL</relief>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label61</name>
+      <x>64</x>
+      <y>32</y>
+      <width>152</width>
+      <height>24</height>
+      <label>Proyecto fin de carrera:</label>
+      <justify>GTK_JUSTIFY_LEFT</justify>
+      <wrap>True</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label63</name>
+      <x>80</x>
+      <y>112</y>
+      <width>248</width>
+      <height>24</height>
+      <label>Autor: Armando Aznar</label>
+      <justify>GTK_JUSTIFY_LEFT</justify>
+      <wrap>True</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label62</name>
+      <x>80</x>
+      <y>48</y>
+      <width>216</width>
+      <height>56</height>
+      <label>Diseño y desarrollo de un sistema de analisis del trafico de paquetes para redes ethernet.</label>
+      <justify>GTK_JUSTIFY_LEFT</justify>
+      <wrap>True</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+
+    <widget>
+      <class>GtkFrame</class>
+      <name>frame1</name>
+      <x>8</x>
+      <y>8</y>
+      <width>336</width>
+      <height>184</height>
+      <label_xalign>0</label_xalign>
+      <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
+
+      <widget>
+	<class>GtkLabel</class>
+	<name>label64</name>
+	<label></label>
+	<justify>GTK_JUSTIFY_CENTER</justify>
+	<wrap>False</wrap>
+	<xalign>0.5</xalign>
+	<yalign>0.5</yalign>
+	<xpad>0</xpad>
+	<ypad>0</ypad>
+      </widget>
+    </widget>
+  </widget>
+</widget>
+
+<widget>
+  <class>GtkWindow</class>
+  <name>win_delfil</name>
+  <width>358</width>
+  <height>278</height>
+  <signal>
+    <name>delete_event</name>
+    <handler>on_win_delfil_delete_event</handler>
+    <last_modification_time>Thu, 26 Jun 2003 10:10:25 GMT</last_modification_time>
+  </signal>
+  <title>   </title>
+  <type>GTK_WINDOW_DIALOG</type>
+  <position>GTK_WIN_POS_CENTER</position>
+  <modal>True</modal>
+  <allow_shrink>False</allow_shrink>
+  <allow_grow>True</allow_grow>
+  <auto_shrink>False</auto_shrink>
+
+  <widget>
+    <class>GtkFixed</class>
+    <name>fixed12</name>
+
+    <widget>
+      <class>GtkButton</class>
+      <name>button9</name>
+      <x>208</x>
+      <y>216</y>
+      <width>64</width>
+      <height>30</height>
+      <can_focus>True</can_focus>
+      <signal>
+	<name>clicked</name>
+	<handler>on_button9_clicked</handler>
+	<last_modification_time>Thu, 26 Jun 2003 10:13:52 GMT</last_modification_time>
+      </signal>
+      <label>Cancelar</label>
+      <relief>GTK_RELIEF_NORMAL</relief>
+    </widget>
+
+    <widget>
+      <class>GtkButton</class>
+      <name>button10</name>
+      <x>96</x>
+      <y>216</y>
+      <width>64</width>
+      <height>30</height>
+      <can_focus>True</can_focus>
+      <signal>
+	<name>clicked</name>
+	<handler>on_button10_clicked</handler>
+	<last_modification_time>Thu, 26 Jun 2003 10:13:46 GMT</last_modification_time>
+      </signal>
+      <label>Eliminar</label>
+      <relief>GTK_RELIEF_NORMAL</relief>
+    </widget>
+
+    <widget>
+      <class>GtkEntry</class>
+      <name>entry_protocol</name>
+      <x>160</x>
+      <y>160</y>
+      <width>158</width>
+      <height>22</height>
+      <can_focus>True</can_focus>
+      <editable>True</editable>
+      <text_visible>True</text_visible>
+      <text_max_length>0</text_max_length>
+      <text></text>
+    </widget>
+
+    <widget>
+      <class>GtkEntry</class>
+      <name>entry_destaddress</name>
+      <x>160</x>
+      <y>120</y>
+      <width>158</width>
+      <height>22</height>
+      <can_focus>True</can_focus>
+      <editable>True</editable>
+      <text_visible>True</text_visible>
+      <text_max_length>0</text_max_length>
+      <text></text>
+    </widget>
+
+    <widget>
+      <class>GtkEntry</class>
+      <name>entry_srcaddress</name>
+      <x>160</x>
+      <y>80</y>
+      <width>158</width>
+      <height>22</height>
+      <can_focus>True</can_focus>
+      <editable>True</editable>
+      <text_visible>True</text_visible>
+      <text_max_length>0</text_max_length>
+      <text></text>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label65</name>
+      <x>24</x>
+      <y>80</y>
+      <width>128</width>
+      <height>24</height>
+      <label>Por direccion origen</label>
+      <justify>GTK_JUSTIFY_LEFT</justify>
+      <wrap>True</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label66</name>
+      <x>24</x>
+      <y>120</y>
+      <width>128</width>
+      <height>24</height>
+      <label>Por direccion destino</label>
+      <justify>GTK_JUSTIFY_LEFT</justify>
+      <wrap>True</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label67</name>
+      <x>24</x>
+      <y>160</y>
+      <width>128</width>
+      <height>24</height>
+      <label>Por protocolo</label>
+      <justify>GTK_JUSTIFY_LEFT</justify>
+      <wrap>True</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label68</name>
+      <x>80</x>
+      <y>24</y>
+      <width>184</width>
+      <height>24</height>
+      <label>Eliminar por filtro</label>
+      <justify>GTK_JUSTIFY_CENTER</justify>
+      <wrap>False</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+  </widget>
+</widget>
+
+<widget>
+  <class>GtkWindow</class>
+  <name>win_infor</name>
+  <width>350</width>
+  <height>200</height>
+  <signal>
+    <name>delete_event</name>
+    <handler>on_win_infor_delete_event</handler>
+    <last_modification_time>Thu, 26 Jun 2003 10:44:15 GMT</last_modification_time>
+  </signal>
+  <title>      </title>
+  <type>GTK_WINDOW_DIALOG</type>
+  <position>GTK_WIN_POS_CENTER</position>
+  <modal>True</modal>
+  <allow_shrink>False</allow_shrink>
+  <allow_grow>True</allow_grow>
+  <auto_shrink>False</auto_shrink>
+
+  <widget>
+    <class>GtkFixed</class>
+    <name>fixed13</name>
+
+    <widget>
+      <class>GtkButton</class>
+      <name>button11</name>
+      <x>144</x>
+      <y>144</y>
+      <width>64</width>
+      <height>30</height>
+      <can_focus>True</can_focus>
+      <signal>
+	<name>clicked</name>
+	<handler>on_button11_clicked</handler>
+	<last_modification_time>Thu, 26 Jun 2003 10:44:32 GMT</last_modification_time>
+      </signal>
+      <label>Aceptar</label>
+      <relief>GTK_RELIEF_NORMAL</relief>
+    </widget>
+
+    <widget>
+      <class>GtkLabel</class>
+      <name>label69</name>
+      <x>96</x>
+      <y>24</y>
+      <width>204</width>
+      <height>95</height>
+      <label>label20</label>
+      <justify>GTK_JUSTIFY_LEFT</justify>
+      <wrap>True</wrap>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+    </widget>
+
+    <widget>
+      <class>GtkPixmap</class>
+      <name>pixmap5</name>
+      <x>8</x>
+      <y>32</y>
+      <width>76</width>
+      <height>76</height>
+      <filename>info.xpm</filename>
+      <xalign>0.5</xalign>
+      <yalign>0.5</yalign>
+      <xpad>0</xpad>
+      <ypad>0</ypad>
+      <build_insensitive>True</build_insensitive>
+    </widget>
+  </widget>
+</widget>
+
+</GTK-Interface>
