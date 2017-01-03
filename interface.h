@@ -1,0 +1,11 @@
+GtkWidget* create_win_ini (void);
+GtkWidget* create_win_cap (void);
+GtkWidget* create_win_error (void);
+GtkWidget* create_win_save (void);
+GtkWidget* create_win_sure (void);
+GtkWidget* create_win_options (void);
+GtkWidget* create_win_goto (void);
+GtkWidget* create_win_find (void);
+GtkWidget* create_win_about (void);
+GtkWidget* create_win_delfil (void);
+GtkWidget* create_win_infor (void);
